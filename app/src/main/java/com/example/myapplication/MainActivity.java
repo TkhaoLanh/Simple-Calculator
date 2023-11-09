@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         clearBtn.setOnClickListener(this);
         buttonAdvance.setOnClickListener(this);
 
-
         // Retrieve the calculation history from the MyApp application context
         MyApp myApp = (MyApp) getApplication();
         String history = myApp.getCalculationHistory();
@@ -109,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     if(calculator.isAdvanceMode()){
                         displayCalculationHistory();
-
                     }
                 }
 
@@ -136,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 historyTextView.setVisibility(View.INVISIBLE);
                 historyTextView.setText("");
                 resultTextView.setText("");
-               // calculator.clear();
+                calculator.clear();
                 break;
             default:
                     //If this is a single digit, push it to the textview
