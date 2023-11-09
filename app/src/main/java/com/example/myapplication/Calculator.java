@@ -9,30 +9,23 @@ import java.util.List;
 public class Calculator {
     // Add a list to store user input
      List<String> stringList;
-    // Add a list to store the calculation history
-    List<String> historyList;
-
     private boolean isAdvanceMode;
-
     private Application application;
 
     public Calculator(Application application){
 
         stringList = new ArrayList<>();
-        historyList = new ArrayList<>();
         isAdvanceMode = false; // default to Standard mode
         this.application = application;
     }
 
     public void clear() {
         stringList.clear();
-        Log.d("Calculator", "ArrayList cleared");
     }
 
     //create push()
     public void push(String value){
             stringList.add(value);
-            Log.d("Calculator", "ArrayList contents: " + stringList.toString());
     }
 
     public int calculate() {
@@ -117,7 +110,6 @@ public class Calculator {
                         default:
                             errorMessage = true;
                             return 333;
-                            //
                     }
                     number1 = result;
                     digitFound = true;
